@@ -27,9 +27,10 @@ _3dplot=st.sidebar.checkbox("3D plots", False)
 linechart=st.sidebar.checkbox("Linechart",False)
 #st.write(w1)
 
-def read_data():
-    return pd.read_csv(r"insurance.csv ")
+#def read_data():
+    #return pd.read_csv(r"insurance.csv ")
 
-df=read_data()
-st.write(df)
-
+#df=read_data()
+#st.write(df)
+if w1:
+    st.write('Table')
