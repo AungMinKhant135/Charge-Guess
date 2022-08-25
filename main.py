@@ -25,3 +25,11 @@ distView=st.sidebar.checkbox("Dist View", False)
 _3dplot=st.sidebar.checkbox("3D plots", False)
 linechart=st.sidebar.checkbox("Linechart",False)
 #st.write(w1)
+
+def read_data():
+    return pd.read_csv("")
+
+df=read_data()
+
+if w1:
+    st.dataframe(df,width=2000,height=500)
