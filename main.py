@@ -31,6 +31,19 @@ if w1:
     image = Image.open('data_charges.png')
     st.image(image, 'Sample data')
 
-
+col1, col2, col3 , col4, col5= st.columns(5)
     
-
+with col1:
+    st.header("Age")
+    
+with col2:
+    st.header("Sex")
+    
+with col3:
+    st.header("BMI")
+    
+with col4:
+    st.header("Children")
+    
+with col5:
+    st.header("smoker")
