@@ -18,14 +18,7 @@ st.sidebar.title("Operations on the Dataset")
 
 #st.subheader("Checkbox")
 w1 = st.sidebar.checkbox("show table", False)
-plot= st.sidebar.checkbox("show plots", False)
-plothist= st.sidebar.checkbox("show hist plots", False)
-trainmodel= st.sidebar.checkbox("Train model", False)
-dokfold= st.sidebar.checkbox("DO KFold", False)
-distView=st.sidebar.checkbox("Dist View", False)
-_3dplot=st.sidebar.checkbox("3D plots", False)
-linechart=st.sidebar.checkbox("Linechart",False)
-#st.write(w1)
+
 
 #def read_data():
     #return pd.read_csv(r"insurance.csv ")
@@ -34,3 +27,10 @@ linechart=st.sidebar.checkbox("Linechart",False)
 #st.write(df)
 if w1:
     st.write('Table')
+
+    
+df = pd.DataFrame(
+np.random.randn(2, 5),
+columns=('col %d' % i for i in range(20)))
+
+st.dataframe(df)  # Same as st.write(df)
