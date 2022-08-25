@@ -4,6 +4,7 @@ import cv2
 import pandas as pd
 from tensorflow.keras.models import load_model
 import streamlit as st
+from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 
 st.title('Charge&Guess')
@@ -34,3 +35,5 @@ np.random.randn(2, 5),
 columns=('col %d' % i for i in range(5)))
 
 st.dataframe(df)  # Same as st.write(df)
+
+image = Image.open('')
