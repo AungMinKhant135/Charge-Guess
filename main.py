@@ -36,4 +36,5 @@ columns=('col %d' % i for i in range(5)))
 
 st.dataframe(df)  # Same as st.write(df)
 
-image = Image.open('')
+image = Image.open('https://github.com/AungMinKhant135/Charge-Guess/blob/main/data_charges.png')
+st.image(image, 'Sample data')
