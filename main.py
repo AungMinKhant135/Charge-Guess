@@ -18,7 +18,7 @@ Please use input data
 st.sidebar.title("Operations on the Dataset")
 
 #st.subheader("Checkbox")
-w1 = st.sidebar.checkbox("show table", False)
+w1 = st.sidebar.checkbox("Sample data ", False)
 
 
 #def read_data():
@@ -27,14 +27,10 @@ w1 = st.sidebar.checkbox("show table", False)
 #df=read_data()
 #st.write(df)
 if w1:
-    st.write('Table')
+    st.write('Sample data')
+    image = Image.open('data_charges.png')
+    st.image(image, 'Sample data')
+
 
     
-df = pd.DataFrame(
-np.random.randn(2, 5),
-columns=('col %d' % i for i in range(5)))
 
-st.dataframe(df)  # Same as st.write(df)
-
-image = Image.open('data_charges.png')
-st.image(image, 'Sample data')
