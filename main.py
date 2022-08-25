@@ -27,9 +27,8 @@ linechart=st.sidebar.checkbox("Linechart",False)
 #st.write(w1)
 
 def read_data():
-    return pd.read_csv("insurance.csv ")
+    return pd.read_csv(r"insurance.csv ")
 
 df=read_data()
+st.write(df)
 
-if w1:
-    st.dataframe(df,width=2000,height=500)
