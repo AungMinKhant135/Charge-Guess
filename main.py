@@ -31,6 +31,6 @@ if w1:
     
 df = pd.DataFrame(
 np.random.randn(2, 5),
-columns=('col %d' % i for i in range(20)))
+columns=('col %d' % i for i in range(5)))
 
 st.dataframe(df)  # Same as st.write(df)
