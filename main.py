@@ -113,6 +113,11 @@ with col5:
      ('yes', 'no'))
 
     st.write('You selected:', smoker)
+    if smoker == 'yes':
+        smoker = 1
+    else:
+        smoker = 0
+    st.write('You selected:', smoker)
     
     
 with col6:
