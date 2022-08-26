@@ -20,8 +20,8 @@ st.sidebar.title("Operations on the Dataset")
 w1 = st.sidebar.checkbox("Sample data ", False)
 
 #have to load model in ('')
-reg_model = joblib.load('CV_RF_Regression.h5')
-
+#reg_model = joblib.load('CV_RF_Regression.h5')#Run to ok
+model_file = joblib.load('CV_RF_Regression.h5')
 
 
 
@@ -146,7 +146,8 @@ ok = st.button("Calculate charges")
 if ok:
     #st.write([age,sex,bmi,children,smoker,region])
     st.write(data_pre)
-    charges = reg_model.predict(data_pre)
+    #charges = reg_model.predict(data_pre)
+    charges = model_file.predict(data_pre)
     st.write(charges)
 
     #st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
