@@ -53,8 +53,8 @@ with col3:
     
 with col4:
     st.header("Child")
-    #children = st.number_input('Insert a number')
-    #st.write('The current number is ', children)
+    children = st.number_input('Insert no of children')
+    st.write('The current number is ', children)
     
 with col5:
     st.header("smoker")
