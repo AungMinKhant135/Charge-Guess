@@ -13,7 +13,7 @@ Please use input data
 ''')
 
 #have to load model in ('')
-model = load_model('CV_RF_Regression.h5')
+model = load_model('CV_RF_Regression')
 
 st.sidebar.title("Operations on the Dataset")
 
