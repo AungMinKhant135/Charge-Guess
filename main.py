@@ -30,7 +30,7 @@ if w1:
     st.write('Sample data')
     image = Image.open('data_charges.png')
     st.image(image, 'Sample data')
-
+'''
 col1, col2, col3 , col4, col5, col6= st.columns(6)
     
 with col1:
@@ -73,3 +73,26 @@ with col6:
 
     st.write('You selected:', region)
     
+'''
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("Age")
+    age = st.number_input('Insert age')
+    st.write('The current number is ', age)
+    
+with col2:
+    st.header("Sex")
+    sex = st.selectbox(
+     'gender',
+     ('male', 'female'))
+
+    st.write('You selected:', sex)
+    
+with col3:
+    st.header("BMI")
+    bmi = st.number_input('Insert bmi')
+    st.write('The current number is ', bmi)
+
+
