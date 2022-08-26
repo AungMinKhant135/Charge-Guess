@@ -96,3 +96,25 @@ with col3:
     st.write('The current number is ', bmi)
 
 
+col4, col5, col6 = st.columns(3)
+with col4:
+    st.header("Child")
+    children = st.number_input('Insert no of children')
+    st.write('The current number is ', children)
+    
+with col5:
+    st.header("smoker")
+    smoker = st.selectbox(
+     'smoker',
+     ('yes', 'no'))
+
+    st.write('You selected:', smoker)
+    
+    
+with col6:
+    st.header("region")
+    region = st.selectbox(
+     'Region',
+     ('southeast', 'southwest','northeast','northwest'))
+    
+    st.write('You selected:', region)
