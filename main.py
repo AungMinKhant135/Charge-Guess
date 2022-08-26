@@ -13,7 +13,7 @@ Please use input data
 ''')
 
 #have to load model in ('')
-#model = load_model('')
+model = load_model('CV_RF_Regression.h5')
 
 st.sidebar.title("Operations on the Dataset")
 
@@ -118,3 +118,13 @@ with col6:
      ('southeast', 'southwest','northeast','northwest'))
     
     st.write('You selected:', region)
+    
+    
+data_pre = ([[age,sex,bmi,children,smoker,region]])
+
+ok = st.button("Calculate charges")
+
+if ok:
+    charges = predict_model(model, data_pre)
+
+    st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
