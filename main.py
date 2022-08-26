@@ -35,11 +35,16 @@ col1, col2, col3 , col4, col5= st.columns(5)
     
 with col1:
     st.header("Age")
-    number = st.number_input('Insert a number')
-    st.write('The current number is ', number)
+    age = st.number_input('Insert a number')
+    st.write('The current number is ', age)
     
 with col2:
     st.header("Sex")
+    sex = st.selectbox(
+     'gender',
+     ('male', 'female'))
+
+    st.write('You selected:', sex)
     
 with col3:
     st.header("BMI")
