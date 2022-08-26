@@ -35,7 +35,7 @@ col1, col2, col3 , col4, col5, col6= st.columns(6)
     
 with col1:
     st.header("Age")
-    age = st.number_input('Insert a number')
+    age = st.number_input('Insert age')
     st.write('The current number is ', age)
     
 with col2:
@@ -48,8 +48,8 @@ with col2:
     
 with col3:
     st.header("BMI")
-    #bmi = st.number_input('Insert a number')
-    #st.write('The current number is ', bmi)
+    bmi = st.number_input('Insert bmi')
+    st.write('The current number is ', bmi)
     
 with col4:
     st.header("Child")
