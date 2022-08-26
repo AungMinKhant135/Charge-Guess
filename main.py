@@ -24,7 +24,7 @@ w1 = st.sidebar.checkbox("Sample data ", False)
 #reg_model = joblib.load('CV_RF_Regression.h5')#Run to ok
 #model_file = joblib.load('CV_RF_Regression.h5')
 
-model = load_model('CV_RF_Regression.h5')
+model = load_model('CV_RF_Regression')
 
 
 
