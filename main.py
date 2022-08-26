@@ -48,8 +48,8 @@ with col2:
     
 with col3:
     st.header("BMI")
-    bmi = st.number_input('Insert a number')
-    st.write('The current number is ', bmi)
+    #bmi = st.number_input('Insert a number')
+    #st.write('The current number is ', bmi)
     
 with col4:
     st.header("Child")
