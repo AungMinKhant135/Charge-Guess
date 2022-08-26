@@ -12,8 +12,6 @@ st.markdown('''
 Please use input data
 ''')
 
-#have to load model in ('')
-model = load_model('CV_RF_Regression.h5')
 
 st.sidebar.title("Operations on the Dataset")
 
@@ -122,9 +120,13 @@ with col6:
     
 data_pre = ([[age,sex,bmi,children,smoker,region]])
 
+#have to load model in ('')
+reg_model = load_model('CV_RF_Regression.h5')
+
+
 ok = st.button("Calculate charges")
 
 if ok:
-    charges = predict_model(model, data_pre)
+    charges = predict_model(reg_model, data_pre)
 
     st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
