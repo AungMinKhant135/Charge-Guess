@@ -137,9 +137,9 @@ with col6:
         region = 3
     st.write('You selected:', region)
     
-data_pre = np.array([age,sex,bmi,children,smoker,region], ndim = 2)
+data_pre = np.array([[age,sex,bmi,children,smoker,region]])
 #x = np.array([30, 0, 25.0, 2,1,2], ndmin=2)
-
+#e = np.array([[37,0,27.740,3,0,1]])
 
 ok = st.button("Calculate charges")
 
