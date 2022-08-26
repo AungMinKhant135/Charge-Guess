@@ -145,7 +145,7 @@ ok = st.button("Calculate charges")
 
 if ok:
     #st.write([age,sex,bmi,children,smoker,region])
-    #st.write(data_pre)
+    st.write(data_pre)
     charges = reg_model.predict(data_pre)
     st.write(charges)
 
