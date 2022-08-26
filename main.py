@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+import joblib
 import pandas as pd
 from tensorflow.keras.models import load_model
 import streamlit as st
@@ -19,7 +20,7 @@ st.sidebar.title("Operations on the Dataset")
 w1 = st.sidebar.checkbox("Sample data ", False)
 
 #have to load model in ('')
-reg_model = load_model('CV_RF_Regression.h5')
+reg_model = joblib.load('CV_RF_Regression.h5')
 
 
 
