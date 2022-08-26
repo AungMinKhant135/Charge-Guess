@@ -31,7 +31,7 @@ if w1:
     image = Image.open('data_charges.png')
     st.image(image, 'Sample data')
 
-col1, col2, col3 , col4, col5= st.columns(5)
+col1, col2, col3 , col4, col5, col6= st.columns(5)
     
 with col1:
     st.header("Age")
@@ -48,9 +48,28 @@ with col2:
     
 with col3:
     st.header("BMI")
+    bmi = st.number_input('Insert a number')
+    st.write('The current number is ', bmi)
     
 with col4:
     st.header("Children")
+    children = st.number_input('Insert a number')
+    st.write('The current number is ', children)
     
 with col5:
     st.header("smoker")
+    smoker = st.selectbox(
+     'smoker',
+     ('yes', 'no'))
+
+    st.write('You selected:', smoker)
+    
+    
+with col6:
+    st.header("region")
+    region = st.selectbox(
+     'Region',
+     ('southeast', 'southwest','northeast','northwest'))
+
+    st.write('You selected:', region)
+    
