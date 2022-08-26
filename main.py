@@ -127,7 +127,15 @@ with col6:
      ('southeast', 'southwest','northeast','northwest'))
     
     st.write('You selected:', region)
-    
+    if region == 'northeast':
+        region = 0
+    else if region == 'northwest':
+        region = 1
+    else if region == 'southeast':
+        region = 2
+    else:
+        region = 3
+    st.write('You selected:', region)
     
 data_pre = ([[age,sex,bmi,children,smoker,region]])
 
