@@ -18,12 +18,12 @@ st.sidebar.title("Operations on the Dataset")
 #st.subheader("Checkbox")
 w1 = st.sidebar.checkbox("Sample data ", False)
 
+#have to load model in ('')
+reg_model = load_model('CV_RF_Regression.h5')
 
-#def read_data():
-    #return pd.read_csv(r"insurance.csv ")
 
-#df=read_data()
-#st.write(df)
+
+
 if w1:
     st.write('Sample data')
     image = Image.open('data_charges.png')
@@ -120,8 +120,6 @@ with col6:
     
 data_pre = ([[age,sex,bmi,children,smoker,region]])
 
-#have to load model in ('')
-reg_model = load_model('CV_RF_Regression.h5')
 
 
 ok = st.button("Calculate charges")
