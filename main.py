@@ -7,6 +7,7 @@ from tensorflow.keras.models import load_model
 import streamlit as st
 from PIL import Image
 from streamlit_drawable_canvas import st_canvas
+from pycaret.regression import *
 
 st.title('Charge&Guess')
 st.markdown('''
@@ -21,7 +22,9 @@ w1 = st.sidebar.checkbox("Sample data ", False)
 
 #have to load model in ('')
 #reg_model = joblib.load('CV_RF_Regression.h5')#Run to ok
-model_file = joblib.load('CV_RF_Regression.h5')
+#model_file = joblib.load('CV_RF_Regression.h5')
+
+model = load_model('CV_RF_Regression.h5')
 
 
 
@@ -154,7 +157,8 @@ if ok:
     st.write(features_df)
     #charges = reg_model.predict(data_pre)
     #charges = model_file.predict(features_df)
-    charges = predict_model(model_file, data=features_df)
+    
+    charges = predict_model(model, data=features_df)
     st.write(charges)
 
     #st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
