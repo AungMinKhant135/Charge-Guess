@@ -153,7 +153,8 @@ if ok:
     #st.write([age,sex,bmi,children,smoker,region])
     st.write(features_df)
     #charges = reg_model.predict(data_pre)
-    charges = model_file.predict(features_df)
+    #charges = model_file.predict(features_df)
+    charges = predict_model(model_file, data=features_df)
     st.write(charges)
 
     #st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
