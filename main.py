@@ -137,17 +137,23 @@ with col6:
         region = 3
     st.write('You selected:', region)
     
-data_pre = np.array([[age,sex,bmi,children,smoker,region]])
+#data_pre = np.array([[age,sex,bmi,children,smoker,region]])
 #x = np.array([30, 0, 25.0, 2,1,2], ndmin=2)
 #e = np.array([[37,0,27.740,3,0,1]])
+
+features ={'age': age, 'sex': sex ,
+           'bmi': bmi, 'children': children,
+           'smoker': smoker, 'region': region}
+features_df  = pd.DataFrame([features])
+#features_df
 
 ok = st.button("Calculate charges")
 
 if ok:
     #st.write([age,sex,bmi,children,smoker,region])
-    st.write(data_pre)
+    st.write(features_df)
     #charges = reg_model.predict(data_pre)
-    charges = model_file.predict(data_pre)
+    charges = model_file.predict(features_df)
     st.write(charges)
 
     #st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
