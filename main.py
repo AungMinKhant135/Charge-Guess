@@ -144,6 +144,7 @@ data_pre = ([[age,sex,bmi,children,smoker,region]])
 ok = st.button("Calculate charges")
 
 if ok:
-    charges = reg_model.predict(data_pre)
+    st.write(data_pre)
+    #charges = reg_model.predict(data_pre)
 
-    st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
+    #st.subheader(f"The estimated charges is ${charges['Label'][0]:.2f}")
