@@ -88,6 +88,11 @@ with col2:
      ('male', 'female'))
 
     st.write('You selected:', sex)
+    if sex == 'male':
+        sex = 1
+    else:
+        sex = 0
+    st.write('You selected:', sex)
     
 with col3:
     st.header("BMI")
