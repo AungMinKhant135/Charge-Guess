@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 import streamlit as st
 from PIL import Image
 from streamlit_drawable_canvas import st_canvas
-from pycaret.regression import *
+#from pycaret.regression import *
 
 st.title('Charge&Guess')
 st.markdown('''
@@ -156,7 +156,7 @@ if ok:
     #st.write([age,sex,bmi,children,smoker,region])
     st.write(features_df)
     #charges = reg_model.predict(data_pre)
-    charges = model_file.predict(features_df)
+    #charges = model_file.predict(features_df)
     
     #charges = predict_model(model, data=features_df)
     st.write(charges)
