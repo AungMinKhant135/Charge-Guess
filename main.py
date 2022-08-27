@@ -110,7 +110,7 @@ with col4:
     st.write('The current number is ', children)
     
 with col5:
-    st.header("smoker")
+    st.header("Smoker")
     smoker = st.selectbox(
      'smoker',
      ('yes', 'no'))
@@ -124,7 +124,7 @@ with col5:
     
     
 with col6:
-    st.header("region")
+    st.header("Region")
     region = st.selectbox(
      'Region',
      ('southeast', 'southwest','northeast','northwest'))
