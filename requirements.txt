@@ -14,3 +14,4 @@ joblib
 matplotlib==3.5.1
 pandas==1.3.5
 streamlit==1.5.0
+pycaret==1.0.0
